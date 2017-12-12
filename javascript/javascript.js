@@ -18,3 +18,8 @@ function UserAction() {
   xhttp.setRequestHeader("Content-type", "application/json");
   xhttp.send();
 }
+
+$("#tweet").on("click", function() {
+  window.open("https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=" + $("#quote-text").text() + " -" + $("#author-text").text(), '_blank');
+});
+
